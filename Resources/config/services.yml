@@ -1,0 +1,29 @@
+services:
+    admin.locations.city:
+        class: Zertz\LocationBundle\Admin\CityAdmin
+        arguments: [null, Zertz\LocationBundle\Entity\City, 'SonataAdminBundle:CRUD']
+        calls:
+            - [setTranslationDomain, [Zertz\LocationBundle]]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Locations, label: Cities }
+    admin.locations.county:
+        class: Zertz\LocationBundle\Admin\CountyAdmin
+        arguments: [null, Zertz\LocationBundle\Entity\County, 'SonataAdminBundle:CRUD']
+        calls:
+            - [setTranslationDomain, [Zertz\LocationBundle]]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Locations, label: Counties }
+    admin.locations.state:
+        class: Zertz\LocationBundle\Admin\StateAdmin
+        arguments: [null, Zertz\LocationBundle\Entity\State, 'SonataAdminBundle:CRUD']
+        calls:
+            - [setTranslationDomain, [Zertz\LocationBundle]]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Locations, label: States }
+    admin.locations.country:
+        class: Zertz\LocationBundle\Admin\CountryAdmin
+        arguments: [null, Zertz\LocationBundle\Entity\Country, 'SonataAdminBundle:CRUD']
+        calls:
+            - [setTranslationDomain, [Zertz\LocationBundle]]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Locations, label: Countries }

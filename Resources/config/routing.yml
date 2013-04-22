@@ -1,0 +1,5 @@
+# Location
+location:
+  resource: "@ZertzLocationBundle/Controller"
+  prefix: /location/{id}/{slug}
+  type: annotation
